@@ -1,279 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Jun Fang, Ph.D. candidate in Political Science and Scientific Computing at the University of Michigan.">
+<meta name="description" content="About Me | Jun Fang, Ph.D. candidate in Political Science and Scientific Computing at the University of Michigan.">
 <meta name="author" content="Jun Fang">
+<title>About Me | Jun Fang</title>
 <style>
-body {
-    background-color:white;
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
-    font-size: 100%;
-    max-width:950px;
-    margin-top:70px;
-    margin-left:100px;
-    margin-right:100px;
-    margin-bottom:100px;
+:root { color-scheme: light; --ink: #111; --link: #0645ad; --muted: #555; --rule: #ddd; }
+* { box-sizing: border-box; }
+html { background: #fff; }
+body { color: var(--ink); background: #fff; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 1.55; letter-spacing: 0; text-align: left; max-width: 960px; margin: 64px auto 80px; padding: 0 24px; }
+a, a:visited { color: var(--link); text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible, summary:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; }
+.skip-link { position: absolute; top: -100px; }
+.skip-link:focus { top: 8px; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.identity { display: block; }
+h1 { font-size: 38px; line-height: 1.2; margin: 0; font-weight: 700; }
+h1 a, h1 a:visited { color: #111; text-decoration: none; }
+.pronouns, .email { font-size: 18px; line-height: 1.5; }
+.pronouns { margin: 8px 0 0; }
+.email { margin: 4px 0 0; }
+nav { display: flex; flex-wrap: wrap; gap: 8px 36px; margin-top: 27px; padding-bottom: 13px; border-bottom: 1px solid var(--rule); font-size: 18px; line-height: 1.4; }
+nav a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; font-weight: 600; padding: 8px 0; white-space: nowrap; }
+nav a[aria-current="page"] { color: #111; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 7px; }
+main { margin-top: 32px; min-height: 320px; }
+h2 { font-size: 21px; line-height: 1.3; margin: 0 0 22px; }
+h3 { color: #111; font-size: 17.6px; line-height: 1.4; font-weight: 700; margin: 34px 0 10px; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+h2 + h3, h2 + .research-topic > h3 { margin-top: 0; }
+p { margin: 0 0 18px; }
+main p, main h3 { overflow-wrap: anywhere; }
+main.about { line-height: 1.65; }
+.about .about-interests { margin-top: 32px; margin-bottom: 28px; }
+.about-interests > strong { display: block; margin-bottom: 6px; }
+.about .about-cv { margin-top: 28px; margin-bottom: 0; }
+.note { color: var(--muted); font-size: 14px; line-height: 1.55; }
+figure { margin: 24px 0 12px; }
+.teaching-chart { max-width: 820px; }
+figure img { display: block; width: 100%; height: auto; }
+figcaption { margin-top: 8px; }
+.course { margin-top: 29px; }
+.course h4 { font-size: 16px; line-height: 1.55; margin: 0 0 3px; }
+.course-ratings { margin: 0; }
+.rating-line { display: block; }
+table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+th, td { padding: 8px 12px; text-align: left; border-bottom: 1px solid #e6e6e6; vertical-align: top; }
+th { font-weight: 600; color: #333; font-size: 14px; }
+th:first-child, td:first-child { padding-left: 0; }
+th:last-child, td:last-child { padding-right: 0; text-align: right; }
+th:nth-child(3), td:nth-child(3) { text-align: right; }
+footer { margin-top: 46px; padding-top: 16px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--muted); }
+footer p { margin: 0; }
+@media (max-width: 760px) { .teaching-chart { max-width: 430px; } }
+@media (max-width: 600px) {
+ body { margin: 28px auto 44px; padding: 0 20px; }
+ nav { gap: 8px 24px; margin-top: 21px; }
+ main { margin-top: 27px; }
+ h3 { margin-top: 30px; }
+ th, td { padding: 9px 6px; font-size: 14px; }
+ th { font-size: 12px; }
+ .note { font-size: 13px; }
 }
-
-h1 {
-    color: black;
-    font-size: 200%;
-}
-
-h2 {
-    color: black;
-    font-size: 120%;
-}
-
-h3 {
-    color: black;
-    font-size: 110%;
-    font-weight: bold;
-    line-height: 1.25;
-    margin-top: 1.8em;
-    margin-bottom: 0.45em;
-    padding-top: 0;
-    border-top: none;
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
-}
-
-h2 + h3 {
-    margin-top: 0.85em;
-}
-
-p  {
-    color: black;
-    font-size: 100%;
-}
-
-a, a:visited {
-    color: #0645ad;
-}
-
-.teaching-intro {
-    line-height: 1.6;
-}
-
-section {
-    float:left;
-    width:350px;
-    padding:10px;
-}
-
-@media (max-width: 700px) {
-    body {
-        margin: 28px 20px 60px;
-    }
-}
+@media (max-width: 480px) { nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 24px; } }
+@media print { body { max-width: none; margin: 20px; padding: 0; } nav, .skip-link { display: none; } .course { break-inside: avoid; } figure { break-inside: avoid; } }
 </style>
-<title>Jun Fang</title>
 </head>
-
 <body>
-
-<h1>Jun Fang</h1>
-("June", he/him)
-
-<br/>
-<br/>
-
-<h2>Contact Information</h2>
-Department of Political Science<br>
-University of Michigan<br>
-505 S. State St., Ann Arbor, MI 48109<br>
-<a href="mailto:junfang@umich.edu">junfang@umich.edu</a>
-
-<br/>
-<br/>
-
-<h2>About Me</h2>
+<a class="skip-link" href="#main">Skip to content</a>
+<header>
+<div class="identity"><h1><a href="index.html">Jun Fang</a></h1><p class="pronouns">("June", he/him)</p><p class="email"><a href="mailto:junfang@umich.edu">junfang@umich.edu</a></p></div>
+<nav aria-label="Main navigation"><a href="index.html" aria-current="page">About Me</a>
+<a href="research.html">Research</a>
+<a href="teaching.html">Teaching</a>
+<a href="mentorship.html">Mentorship</a></nav>
+</header>
+<main id="main" class="about">
+<h2 class="visually-hidden">About Me</h2>
 <p>
-I am a Ph.D. candidate in <a href="https://lsa.umich.edu/polisci/people/graduate-students/junfang.html" target="_blank">Political Science</a> and <a href="https://micde.umich.edu/member/jun-fang-2/" target="_blank">Scientific Computing</a> at the University of Michigan.
+I am a Ph.D. candidate in <a href="https://lsa.umich.edu/polisci/people/graduate-students/junfang.html" rel="noopener noreferrer" target="_blank">Political Science</a> and <a href="https://micde.umich.edu/member/jun-fang-2/" rel="noopener noreferrer" target="_blank">Scientific Computing</a> at the University of Michigan.
 </p>
-
 <p>
 During the 2026 Autumn Quarter, I am a Big Ten Academic Alliance Traveling Scholar at the University of Chicago.
 </p>
 
 <p>
-<strong>Research Interests:</strong> Political Economy of Technology; Political Communication; Comparative Politics; International Relations and International Political Economy; International Business and Nonmarket Strategy; Generative and Agentic AI; Computational Social Science.
-</p>
-
-<p>
 My dissertation examines social media platforms that also function as digital marketplaces. This combination of social media and e-commerce, known as social shopping, lets users buy products directly through the content they view, such as videos and posts. I study how content creators use political content to attract attention and sell products, and how governments regulate these marketplaces across countries.
 </p>
-
 <p>
 My work on China's platforms is part of a broader research agenda on Chinese domestic politics and international relations. I also study AI's political and social implications and the reliability of AI-assisted social science research.
 </p>
-
-<p>
+<p class="about-interests">
+<strong>Research Interests:</strong> Political Economy of Technology; Political Communication; Comparative Politics; International Relations and International Political Economy; International Business and Nonmarket Strategy; Generative and Agentic AI; Computational Social Science.
+</p><p class="about-cv">
 <a href="mailto:junfang@umich.edu?subject=CV%20request">CV</a> (available upon request; updated September 2026)
 </p>
-
-<br/>
-
-<h2>Research</h2>
-
-<h3>Dissertation: Political Economy of Digital Platforms</h3>
-
-<p>
-<strong>The Political Economy of Digital Platforms: Essays on Polarization, Nationalism, and Digital Trade</strong><br>
-My dissertation examines how commercial incentives and government regulation shape digital platforms, political communication, and cross-border commerce.
-</p>
-
-<p>
-<strong>When Polarization Pays: How Content Creators Exploit Partisanship for Engagement and Sales</strong><br>
-<i>Working Paper, 2026</i>
-</p>
-
-<p>
-<strong>Algorithmic Nationalism: Evidence from China</strong><br>
-<i>Working Paper, 2026</i>
-</p>
-
-<p>
-<strong>The Varieties of Digital Trade Regimes: How States Govern a Global Marketplace</strong><br>
-<i>Working Paper, 2026</i>
-</p>
-
-<h3>Generative and Agentic AI: Political Implications and Research Methods</h3>
-
-<p>
-<strong>AI Sovereignty</strong><br>
-with Zongyi Huo, <a href="https://arthurzeyangyu.github.io/" target="_blank" rel="noopener noreferrer">Zeyang Yu</a>, and <a href="https://politics.princeton.edu/people/liangyuan-zeng" target="_blank" rel="noopener noreferrer">Liangyuan Zeng</a><br>
-<i>Work in Progress</i>
-</p>
-
-<p>
-<strong>AI and Labor</strong><br>
-<i>Work in Progress</i>
-</p>
-
-<p>
-<strong>AI-Assisted Multilingual Text Analysis</strong><br>
-with <a href="https://www.linkedin.com/in/junjie-li-2b44ba265/" target="_blank" rel="noopener noreferrer">Junjie Li</a><br>
-<i>Under Review</i>
-</p>
-
-<p>
-<strong>AI-Assisted Causal Inference</strong><br>
-with <a href="https://www.linkedin.com/in/junjie-li-2b44ba265/" target="_blank" rel="noopener noreferrer">Junjie Li</a> and <a href="https://arthurzeyangyu.github.io/" target="_blank" rel="noopener noreferrer">Zeyang Yu</a><br>
-<i>Work in Progress</i>
-</p>
-
-<p>
-<strong>AI-Assisted Experimental Design</strong><br>
-with <a href="https://www.linkedin.com/in/junjie-li-2b44ba265/" target="_blank" rel="noopener noreferrer">Junjie Li</a> and <a href="https://arthurzeyangyu.github.io/" target="_blank" rel="noopener noreferrer">Zeyang Yu</a><br>
-<i>Work in Progress</i>
-</p>
-
-<h3>International and Domestic Politics of China</h3>
-
-<p>
-<strong>Domestic Migrants' Responsiveness to Electoral Mobilization under Authoritarianism: Evidence from China's Grassroots Elections</strong><br>
-with <a href="https://sites.google.com/umich.edu/jeanhong" target="_blank">Ji Yeon Hong</a><br>
-<i>Electoral Studies</i>, Vol. 66: 102170, 2020<br>
-<a href="https://doi.org/10.1016/j.electstud.2020.102170" target="_blank">[DOI]</a>
-</p>
-
-<p>
-<strong>The Competence Trap: Visible Gray-Zone Coercion and Public Confidence in Target States</strong><br>
-with <a href="https://politics.princeton.edu/people/liangyuan-zeng" target="_blank">Liangyuan Zeng</a> and <a href="https://www.uu.se/en/contact-and-organisation/staff?query=N26-1941" target="_blank">Charlotte Tianran Ye</a><br>
-<i>Under Review</i>
-</p>
-
-<p>
-<strong>Insurgent Investment: Unfinished Infrastructure and Rebellion in Weak States</strong><br>
-with <a href="https://www.zerenli.org/" target="_blank">Zeren Li</a><br>
-<i>Under Review</i>
-</p>
-
-<p>
-<strong>Economic Incentives and Identity-Based Perceptions and Behaviors in China</strong><br>
-with <a href="https://sites.google.com/umich.edu/jeanhong" target="_blank">Ji Yeon Hong</a> and <a href="https://scholar.google.com/citations?user=7l2Y76UAAAAJ&amp;hl=en" target="_blank">Jipeng Zhang</a><br>
-<i>Revise and Resubmit</i>
-</p>
-
-<p>
-<strong>Partisan Electoral Cycles and Hawkish Sentiment in the US Congress</strong><br>
-with <a href="https://keough.nd.edu/about/faculty-staff-directory/mary-gallagher/" target="_blank">Mary Gallagher</a> and Lindsey-Grey Quint<br>
-<i>Work in Progress</i>
-</p>
-
-<br/>
-
-<h2>Teaching</h2>
-
-<h3>Graduate Student Instructor, University of Michigan</h3>
-<p class="teaching-intro">
-Recipient of the <strong>John W. Kingdon Teaching Award</strong> (2025-2026), Department of Political Science, University of Michigan<br>
-Teaching ratings are the mean of all University-wide instructor evaluation items, on a 5-point scale.
-</p>
-
-<p>
-<strong>POLSCI 699: Statistical Methods in Political Research II (Ph.D.)</strong><br>
-2026: Teaching rating: 5.0/5.0 (Winter 2026, Section 002, 18 students)<br>
-2025: Teaching rating: 5.0/5.0 (Winter 2025, Section 002, 15 students)
-</p>
-
-<p>
-<strong>POLSCI 490: Introduction to Game Theory and Formal Models (Undergraduate)</strong><br>
-2023: Teaching rating: 5.0/5.0 (Winter 2023, Section 003, 21 students)<br>
-2023: Teaching rating: 4.9/5.0 (Winter 2023, Section 002, 22 students)<br>
-2021: Teaching rating: 4.9/5.0 (Fall 2021, Section 003, 19 students)<br>
-2021: Teaching rating: 4.8/5.0 (Fall 2021, Section 002, 20 students)
-</p>
-
-<p>
-<strong>POLSCI 369: Politics of International Economic Relations (Undergraduate)</strong><br>
-2024: Teaching rating: 4.9/5.0 (Fall 2024, Section 002, 24 students)<br>
-2024: Teaching rating: 4.8/5.0 (Fall 2024, Section 005, 25 students)
-</p>
-
-<p>
-<strong>POLSCI 140: Introduction to Comparative Politics (Undergraduate)</strong><br>
-2022: Teaching rating: 4.9/5.0 (Fall 2022, Section 010, 19 students)<br>
-2022: Teaching rating: 4.8/5.0 (Fall 2022, Section 008, 18 students)<br>
-2022: Teaching rating: 4.9/5.0 (Winter 2022, Section 004, 19 students)<br>
-2022: Teaching rating: 4.9/5.0 (Winter 2022, Section 002, 18 students)<br>
-2022: Teaching rating: 4.8/5.0 (Winter 2022, Section 005, 20 students)
-</p>
-
-<br/>
-
-<h2>Mentorship</h2>
-
-<h3>Undergraduate Research Opportunity Program, University of Michigan</h3>
-<p>
-Ameen Abdur-Rasheed (Information Technology), Sultan Almarzooqi (Data Science), Yuxing (Nemo) Chen (Political Science), Rebecca Davidov (Economics), Hamza Dinki (Economics), Miaoya Feng (Economics), Bartu Geyik (Cognitive Science), Ajay Gopinath (Data Science), Mehek Gupta (Statistics), Spencer Hu (Financial Mathematics), Oliver Kammeraad (Data Science), Sydney Lapham (Political Science), Xiaohan Lu (Economics), Sky Ni (Business Administration), Zhengkun Ou (Math), Grace Park (Communication), Nikhil Srinvasan (Data Science), Kefei Xiao (Data Science), and Zhengxue Zhu (Statistics).
-</p>
-
-<h3>Research Assistants Admitted to Ph.D. Programs</h3>
-<p>
-Xintian Wang, University of Rochester (2024)<br>
-Liangyuan Zeng, Princeton University (2024)<br>
-Renji Zhou, MIT (2025)<br>
-Zhonghan Xie, University of Michigan (2026)<br>
-Yuxing (Nemo) Chen, Harvard University (2026)
-</p>
-
-<h3>Research Assistants Entering Industry</h3>
-<p>
-Junjie Li, Software Engineer, Amazon (2025)<br>
-Zijing Wang, Operations Director, Save the Water (2026)
-</p>
-
-<br/>
-
-<p>
-Last updated: October 2026
-</p>
-
+</main>
+<footer><p>Last updated: October 2026</p></footer>
 </body>
 </html>
